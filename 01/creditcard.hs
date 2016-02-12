@@ -1,3 +1,7 @@
+{-# OPTIONS_GHC -Wall #-}
+
+module Creditcard where
+
 charToString :: Char -> String
 charToString ch = [ch]
 
