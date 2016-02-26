@@ -12,3 +12,6 @@ parseMessage message =
         ("W":timestamp:description) -> LogMessage Warning (read timestamp) (unwords description)
         ("I":timestamp:description) -> LogMessage Info (read timestamp) (unwords description)
         _ -> Unknown message
+
+parse :: String -> [LogMessage]
+parse logFileContent = map parseMessage $ lines logFileContent
